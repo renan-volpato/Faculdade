@@ -1,3 +1,5 @@
+import java.time.LocalDate;
+
 public class Exame {
   public Date data;
   public String consulta;
