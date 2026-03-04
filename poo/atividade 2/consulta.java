@@ -2,7 +2,6 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 
 public class Consulta {
-
   public LocalDate data;
   public LocalTime hora;
   public String medico;
