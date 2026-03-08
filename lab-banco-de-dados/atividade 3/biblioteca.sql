@@ -38,55 +38,55 @@ CREATE TABLE obra (
 	numero_edicao INT,
 	editora VARCHAR(100),
 	numero_pagina INT,
-  categoria_obra_id INT NOT NULL,
-
-  FOREIGN KEY (categoria_obra_id) REFERENCES categoriaObra(id_categoria)
+  	categoria_obra_id INT NOT NULL,
+	
+  	FOREIGN KEY (categoria_obra_id) REFERENCES categoriaObra(id_categoria)
 );
 
 CREATE TABLE copia(
 	id_copia INT PRIMARY KEY AUTO_INCREMENT,
-  status varchar(50),
-  id_obra int NOT NULL,
+  	status varchar(50),
+  	id_obra int NOT NULL,
 
- FOREIGN KEY (id_obra) REFERENCES obra(id_obra)
+ 	FOREIGN KEY (id_obra) REFERENCES obra(id_obra)
 );
 
 CREATE TABLE funcionario(
 	id_funcionario INT PRIMARY KEY AUTO_INCREMENT,
 	nome VARCHAR(100) NOT NULL,
-  telefone VARCHAR(30) NOT NULL,
-  email VARCHAR(100) NOT NULL,
-  senha VARCHAR(100),
-  endereco VARCHAR(100),
-  cidade VARCHAR(100),
-  estado VARCHAR(2),
-  data_nascimento DATE
+  	telefone VARCHAR(30) NOT NULL,
+  	email VARCHAR(100) NOT NULL,
+  	senha VARCHAR(100),
+  	endereco VARCHAR(100),
+  	cidade VARCHAR(100),
+  	estado VARCHAR(2),
+  	data_nascimento DATE
 );
 
 CREATE TABLE reserva(
-  id_reserva INT PRIMARY KEY AUTO_INCREMENT,
-  data_reserva DATE,
-  data_prevista_retirada DATE,
-  data_prevista_devolucao DATE,
-  leitor INT NOT NULL,
-  obra INT NOT NULL,
+  	id_reserva INT PRIMARY KEY AUTO_INCREMENT,
+  	data_reserva DATE,
+  	data_prevista_retirada DATE,
+  	data_prevista_devolucao DATE,
+  	leitor INT NOT NULL,
+  	obra INT NOT NULL,
 
-  FOREIGN KEY (obra) REFERENCES obra(id_obra),
-  FOREIGN KEY (leitor) REFERENCES leitor(id_leitor)
+  	FOREIGN KEY (obra) REFERENCES obra(id_obra),
+  	FOREIGN KEY (leitor) REFERENCES leitor(id_leitor)
 );
 
 CREATE TABLE emprestimo(
-  id_emprestimo INT PRIMARY KEY AUTO_INCREMENT,
-  data_emprestimo DATE,
-  data_prevista_devolucao DATE,
-  data_devolucao DATE,
-  multa DECIMAL(15,2) default 0,
-  situacao VARCHAR(100),
-  leitor INT NOT NULL,
-  copia INT NOT NULL,
-  funcionario INT NOT NULL,
+  	id_emprestimo INT PRIMARY KEY AUTO_INCREMENT,
+  	data_emprestimo DATE,
+  	data_prevista_devolucao DATE,
+  	data_devolucao DATE,
+  	multa DECIMAL(15,2) default 0,
+  	situacao VARCHAR(100),
+  	leitor INT NOT NULL,
+  	copia INT NOT NULL,
+  	funcionario INT NOT NULL,
 
-  FOREIGN KEY (leitor) REFERENCES leitor(id_leitor),
-  FOREIGN KEY (copia) REFERENCES copia(id_copia),
-  FOREIGN KEY (funcionario) REFERENCES funcionario(id_funcionario)
+  	FOREIGN KEY (leitor) REFERENCES leitor(id_leitor),
+  	FOREIGN KEY (copia) REFERENCES copia(id_copia),
+  	FOREIGN KEY (funcionario) REFERENCES funcionario(id_funcionario)
 );  
