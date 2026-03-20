@@ -1,6 +1,6 @@
-/* Utilizando a correção da atividade 2 modifique as classes colocando os gets 
-e sets e criando os 2 construtores um sem parametros e outro para 
-inicialização de cada atributo e o método mostrar de cada classe */
+/* Utilizando a correção da atividade poo03 crie a proteção de exceções dos metodos 
+set de cada classe e do metodos criadores, para caso ocorra uma exceção defina valores
+padroes para os atribuitos e mostre uma mensagem “Ocorreu uma exceção – Valores padrões definidos” */
 
   public class Medico {
     public String nome;
