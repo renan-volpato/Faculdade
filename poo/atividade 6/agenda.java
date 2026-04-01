@@ -12,19 +12,16 @@ public class Agenda {
     public Agenda() {
     }
 
-    public Agenda(LocalDate data, LocalTime hora) throws Exception {
-        setData(data);
-        setHora(hora);
+    public Agenda(LocalDate data, LocalTime hora) {
+        this.data = data;
+        this.hora = hora;
     }
 
     public LocalDate getData() {
         return data;
     }
 
-    public void setData(LocalDate data) throws Exception {
-        if (data == null) {
-            throw new Exception("nao pode ser nula");
-        }
+    public void setData(LocalDate data) {
         this.data = data;
     }
 
@@ -32,18 +29,11 @@ public class Agenda {
         return hora;
     }
 
-    public void setHora(LocalTime hora) throws Exception {
-        if (hora == null) {
-            throw new Exception("nao pode ser nula");
-        }
+    public void setHora(LocalTime hora) {
         this.hora = hora;
     }
 
     public void consultar() {
-        System.out.println("agenda consultada");
-    }
-
-    public void mostrar() {
-        System.out.println("agenda [data=" + data + ", hora=" + hora + "]");
+        System.out.println("Agenda consultada");
     }
 }
