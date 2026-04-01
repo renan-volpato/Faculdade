@@ -1,3 +1,6 @@
+/* Utilizando o modelo de classe abaixo, implemente as heranças 
+ropostas na correção da atividade POO05 */
+
 public class Consulta extends Agenda {
 
     private Medico medico;
