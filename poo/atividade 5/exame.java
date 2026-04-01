@@ -1,8 +1,6 @@
 /* Usando a correção da atividade anterior, crie as associações, composições e 
 agregaçoes propostas no diagrama de classe abaixo: */
 
-package com.fatec.ads;
-
 public class Exame {
     private String data;
     private String descritivo;
