@@ -1,3 +1,6 @@
+/* Usando a correção da atividade anterior, crie as associações, composições e 
+agregaçoes propostas no diagrama de classe abaixo: */
+
 package com.fatec.ads;
 
 import java.util.ArrayList;
