@@ -1,15 +1,66 @@
-public class Agenda {
-    public String data;
-    public String hora;
-    public String medico;
-    public String paciente;
+public abstract class Agenda {
+    String data;
+    String hora;
+    Medico medico;
+    Paciente paciente;
 
     public void consultar(){
     }
+    
+    public String getData() {
+        return data;
+    }
+
+    public void setData(String data) throws Exception {
+        if (data == null) {
+            throw new Exception("data obrigatória");
+        } else{
+            this.data = data;
+        }
+    }
+
+    public String getHora() {
+        return hora;
+    }
+
+    public void setHora(String hora) {
+        this.hora = hora;
+    }
+
+    public Medico getMedico() {
+        return medico;
+    }
+
+    public void setMedico(Medico medico) {
+        this.medico = medico;
+    }
+
+    public Paciente getPaciente() {
+        return paciente;
+    }
+
+    public void setPaciente(Paciente paciente) {
+        this.paciente = paciente;
+    }
+
+    public Agenda(){
+        this.data="";
+        this.hora="";
+        this.medico=null;
+        this.paciente=null;
+    }
+
+    public Agenda(String pData, String pHora, Medico pMedico, Paciente pPaciente) throws Exception {
+        setData(pData);
+        setHora(pHora);
+        setMedico(pMedico);
+        setPaciente(pPaciente);
+    }
+
     public void mostrar(){
-        System.out.println("data:"+data);
-        System.out.println("hora:"+hora);
-        System.out.println("medico:"+medico);
-        System.out.println("paciente:"+paciente);
+        System.out.println("data:"+getData());
+        System.out.println("hora:"+getHora());
+        System.out.println("medico:"+getMedico());
+        System.out.println("paciente:"+getPaciente());
     }
 }
