@@ -1,6 +1,6 @@
 ## Faculdade 
 
-Repositório criado para armazenar aividades, exercícios, projetos e trabalhos desenvolvidos durante o terceiro semestre da minha graduação em Análise e Desenvolvimento de Sistemas na Fatec Ipiranga.
+Repositório criado para armazenar atividades, exercícios, projetos e trabalhos desenvolvidos durante o terceiro semestre da minha graduação em Análise e Desenvolvimento de Sistemas na Fatec Ipiranga.
 
 ## Matérias
 
